@@ -251,7 +251,7 @@ app.get('/auth/google', (req, res) => {
   const authUrl = oauth2Client.generateAuthUrl({
     access_type: 'offline',
     scope: SCOPES,
-    prompt: 'consent',
+    prompt: 'consent select_account',
     state: origin // Pass through the origin to the callback
   });
   res.redirect(authUrl);
